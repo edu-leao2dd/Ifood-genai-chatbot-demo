@@ -19,7 +19,7 @@ if st.button("Enviar"):
         client = Groq(api_key=api_key)
 
         completion = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": "Você é um assistente de IA útil."},
                 {"role": "user", "content": user_input},
@@ -27,4 +27,4 @@ if st.button("Enviar"):
         )
 
         st.subheader("Resposta:")
-        st.write(completion.choices[0].message["content"])
+        st.write(completion.choices[0].message.content)
