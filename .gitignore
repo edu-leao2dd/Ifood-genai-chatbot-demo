@@ -2,3 +2,6 @@ __pycache__/
 .env
 *.pyc
 venv/ 
+
+# Adicionando segredos do Streamlit e a pasta .streamlit inteira
+.streamlit/
